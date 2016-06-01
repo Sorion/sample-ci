@@ -19,7 +19,7 @@ describe('contacts', function(){
 			.expect(200);
 		});
 		
-		it('should not be authorized to create a new contact with an already existing contact', function({
+		it('should not be authorized to create a new contact with an already existing contact', function(){
 			return request(api)
 			.post('/contacts/exists')
 			.send()
