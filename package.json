@@ -1,0 +1,28 @@
+{
+  "name": "sample-ci",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sorion/sample-ci.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sorion/sample-ci/issues"
+  },
+  "homepage": "https://github.com/Sorion/sample-ci#readme",
+  "dependencies": {
+    "express": "^4.13.4"
+  },
+  "devDependencies": {
+    "supertest": "^1.2.0"
+  }
+}
