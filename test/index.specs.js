@@ -2,7 +2,7 @@ var request = require('supertest');
 var api = require('../index');
 
 describe('contacts', function(){
-	describe('GET /contacts', function(){
+	describe('GET /api/contacts', function(){
 		it('should return list of contacts', function(){
 			request(api)
 			.get('/contacts')
@@ -11,32 +11,32 @@ describe('contacts', function(){
 		});
 	});
 	
-	describe('POST /contacts/:name', function(){
+	describe('POST /api/contacts/:name', function(){
 		it('should create a new contact', function(){
 			return request(api)
-			.post('/contacts/foo')
+			.post('/api/contacts/foo')
 			.send()
 			.expect(200);
 		});
 		
 		it('should not be authorized to create a new contact with an already existing contact', function(){
-			return request(api).post('/contacts/exist').send().expect(403);
+			return request(api).post('/api/contacts/exist').send().expect(403);
 		});
 	});
 	
-	describe('PUT /contacts/:name', function(){
+	describe('PUT /api/contacts/:name', function(){
 		it('should update contacts with the same name', function(){
 			return request(api)
-			.put('/contacts/foo/bar')
+			.put('/api/contacts/foo/bar')
 			.send()
 			.expect(200)
 		});
 	});
 	
-	describe('DELETE /contacts/:name', function(){
+	describe('DELETE /api/contacts/:name', function(){
 		it('should not delete contacts with the same name', function(){
 			return request(api)
-			.delete('/contacts/foo')
+			.delete('/api/contacts/foo')
 			.send()
 			.expect(200)
 		});
