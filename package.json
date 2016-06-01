@@ -20,7 +20,8 @@
   },
   "homepage": "https://github.com/Sorion/sample-ci#readme",
   "dependencies": {
-    "express": "^4.13.4"
+    "express": "^4.13.4",
+    "lodash": "^4.13.1"
   },
   "devDependencies": {
     "supertest": "^1.2.0"
